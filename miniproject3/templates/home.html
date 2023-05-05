@@ -10,14 +10,56 @@
             height: 100%;
              width: 100%;
         }
+        body {
+            background-image: url(https://media.istockphoto.com/id/1248970761/vector/dad-quote-fathers-day-slogan-illustration-tshirt-print-graphic-quote-modern-cool-funny.jpg?s=612x612&w=0&k=20&c=5_VcaoQRbL02VRX2vo1p3gZIA4kLYX_Q08L0sa2mzLo=);
+            background-position: 50% 30% 50%;
+            background-repeat:no-repeat;
+        
+        }
+        #main {
+            position: relative;
+            top: 350px;
+            left: 40%;
+            background-color: rgb(121, 236, 198);
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+        }
+        .inner {
+            position: relative;
+            top: 20%;
+        }
+        h1 {
+            text-align: center;
+            padding: 10px;
+            color: black;
+            font-size: 3.2rem;
+        }
+        form {
+            padding: 10px;
+            text-align: center;
+        }
+        p {
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+            color:black;
+            font-size: 1.2rem;
+
+        }
     </style>
 </head>
 <body>
-    <h1>Dad Jokes</h1>
-    <form method="GET" action="/jokes/random">
-        <button onclick="random_joke()">Get a random joke</button>
-    </form>
-    <p>{{ setup }}</p>
-    <p>{{ punchline }}</p>
+    <div id="main">
+        <div class="inner">
+            <h1>Dad Jokes</h1>
+    
+            <form method="GET" action="/jokes/random">
+                <button onclick="random_joke()">Get a random joke</button>
+            </form>
+            <p>{{ setup }}</p>
+            <p>{{ punchline }}</p></div>
+        
+</div>
 </body>
 </html>
